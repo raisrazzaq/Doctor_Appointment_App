@@ -18,8 +18,8 @@ const CommonBtn = ({w, h, txt, onClick, status}) => {
             justifyContent: 'center',
             alignItems: 'center',
             borderRadius: 10,
-            marginTop: 10,
-            marginBottom: 10,
+            marginTop: 20,
+            marginBottom: 20,
           }}>
           <Text style={styles.txt}>{txt}</Text>
         </LinearGradient>

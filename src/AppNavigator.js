@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SplashScreen from './screens/splash';
 import HomeScreen from './screens/home';
 import BookAppointment from './screens/bookAppointment';
+import SuccessScreen from './screens/successScreen/SuccessScreen';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,11 @@ const AppNavigator = () => {
         <Stack.Screen
           name="BookAppointment"
           component={BookAppointment}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="SuccessScreen"
+          component={SuccessScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
