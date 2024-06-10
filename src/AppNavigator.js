@@ -5,6 +5,9 @@ import SplashScreen from './screens/splash';
 import HomeScreen from './screens/home';
 import BookAppointment from './screens/bookAppointment';
 import SuccessScreen from './screens/successScreen/SuccessScreen';
+import Pending from './screens/pending/Pending';
+import Completed from './screens/completed/Completed';
+import CallAmb from './screens/ambulace/CallAmb';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +33,21 @@ const AppNavigator = () => {
         <Stack.Screen
           name="SuccessScreen"
           component={SuccessScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Pending"
+          component={Pending}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Completed"
+          component={Completed}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="CallAmb"
+          component={CallAmb}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

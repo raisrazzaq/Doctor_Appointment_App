@@ -2,7 +2,7 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
-const CommonBtn = ({w, h, txt, onClick, status}) => {
+const CommonBtn = ({w, h, txt, onClick, status, title}) => {
   return (
     <TouchableOpacity
       onPress={() => {

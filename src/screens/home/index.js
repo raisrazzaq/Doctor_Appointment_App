@@ -19,8 +19,8 @@ const HomeScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <ScrollView>
-        <View style={styles.container}>
+      <View style={styles.container}>
+        <ScrollView>
           <Header title="DoctorApp" isIcon={false} />
           <Image
             source={require('../../assets/DoctorImage.jpeg')}
@@ -88,8 +88,37 @@ const HomeScreen = ({navigation}) => {
               }}
             />
           </View>
+        </ScrollView>
+        <View style={styles.BottomTab}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Completed');
+            }}>
+            <Image
+              source={require('../../assets/task.png')}
+              style={styles.BottomImages}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Pending');
+            }}>
+            <Image
+              source={require('../../assets/pending.png')}
+              style={styles.BottomImages}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('CallAmb');
+            }}>
+            <Image
+              source={require('../../assets/ambulace.png')}
+              style={styles.BottomImages}
+            />
+          </TouchableOpacity>
         </View>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
@@ -164,6 +193,31 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: 'green',
     marginTop: 5,
+  },
+  BottomTab: {
+    width: '90%',
+    height: 60,
+    borderRadius: 10,
+    position: 'absolute',
+    bottom: 15,
+    backgroundColor: 'white',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 5,
+  },
+  BottomImages: {
+    height: 30,
+    width: 30,
   },
 });
 

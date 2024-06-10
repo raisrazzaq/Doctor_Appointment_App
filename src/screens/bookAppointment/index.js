@@ -303,6 +303,19 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '700',
   },
+  BottomTab: {
+    width: '90%',
+    height: 60,
+    borderRadius: 10,
+    elevation: 5,
+    position: 'absolute',
+    bottom: 20,
+    backgroundColor: 'pink',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
 });
 
 export default BookAppointment;

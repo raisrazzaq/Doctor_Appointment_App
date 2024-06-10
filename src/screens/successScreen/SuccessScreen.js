@@ -1,7 +1,14 @@
-import {View, Text, SafeAreaView, StyleSheet, Image} from 'react-native';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 
-const SuccessScreen = () => {
+const SuccessScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
@@ -10,6 +17,13 @@ const SuccessScreen = () => {
           style={styles.img}
         />
         <Text style={styles.msg}>{'Your Appointment successfully booked'}</Text>
+        <TouchableOpacity
+          style={styles.GotoHome}
+          onPress={() => {
+            navigation.navigate('HomeScreen');
+          }}>
+          <Text> Go to Home</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -29,6 +43,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '700',
     marginTop: 20,
+  },
+  GotoHome: {
+    width: 150,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+    borderWidth: 0.5,
+    marginTop: 30,
   },
 });
 export default SuccessScreen;
